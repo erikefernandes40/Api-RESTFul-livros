@@ -7,5 +7,7 @@ export const yupCreateBookInput = yup.object().shape({
 });
 
 export const yupUpdateBookAmountInput = yup.object().shape({
+  imageUrl: yup.string().url(),
   amount: yup.number().required().positive().integer(),
+  name: yup.string().required()
 });
